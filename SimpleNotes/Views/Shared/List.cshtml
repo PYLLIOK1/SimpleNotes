@@ -1,0 +1,29 @@
+﻿<div id="t_hd">
+    <table class="sortable" border="1">
+        <thead>
+            <tr>
+                <th>Название файла</th>
+                <th>Теги</th>
+                <th>Автор</th>
+                <th>Дата создания</th>
+                <th class="skipsort">Иконка</th>
+            </tr>
+        </thead>
+        @foreach (var b in Model.Notes)
+        {
+        <tr>
+            <td><p>@b.Name</p></td>
+            <td>
+                @foreach (var itemTag in b.Tags)
+                {
+                    <p>@itemTag.Name</p>
+                }
+            </td>
+            <td><p>@b.Author.Name</p></td>
+            <td><p>@b.DateTime</p></td>
+            <td><a href="@b.Path" download><img src="@b.Ico"></a></td>
+        </tr>
+        }
+    </table>
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+</div>

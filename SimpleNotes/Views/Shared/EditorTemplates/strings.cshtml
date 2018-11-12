@@ -1,0 +1,12 @@
+﻿@model  string[]
+
+@if (Model == null)
+{
+    <input type="text" name="Tag" class="form-control first" id="tag" />
+    return;
+}
+
+@foreach (var item in Model)
+{
+    <input type="text" name="Tag" value="@item" class="form-control" />
+}

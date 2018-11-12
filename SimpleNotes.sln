@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2050
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleNotes", "SimpleNotes\SimpleNotes.csproj", "{F4C1877E-C4E1-4E14-81EA-24D3798C83E5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{25955C8A-991F-43CE-ABD6-01B9AF5C175A} = {25955C8A-991F-43CE-ABD6-01B9AF5C175A}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleNotes.Core", "SimpleNotes.Core\SimpleNotes.Core.csproj", "{25955C8A-991F-43CE-ABD6-01B9AF5C175A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F4C1877E-C4E1-4E14-81EA-24D3798C83E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4C1877E-C4E1-4E14-81EA-24D3798C83E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4C1877E-C4E1-4E14-81EA-24D3798C83E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4C1877E-C4E1-4E14-81EA-24D3798C83E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25955C8A-991F-43CE-ABD6-01B9AF5C175A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25955C8A-991F-43CE-ABD6-01B9AF5C175A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25955C8A-991F-43CE-ABD6-01B9AF5C175A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25955C8A-991F-43CE-ABD6-01B9AF5C175A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C6DF16FC-6128-43B2-A0AC-D599506A747E}
+	EndGlobalSection
+EndGlobal

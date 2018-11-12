@@ -1,0 +1,52 @@
+﻿@{
+    ViewBag.Title = "Мой список";
+    Layout = "~/Views/Shared/_LayoutHm.cshtml";
+}
+
+
+<table class="table">
+    <tr>
+        <th>Название заметки</th>
+        <th>текст заметки</th>
+        <th>Теги</th>
+        <th>Опубликована</th>
+        <th>Дата создания</th>
+        <th class="skipsort">Иконка</th>
+    </tr>
+
+    @foreach (var item in Model.Notes)
+    {
+        <tr>
+            <td>
+                <p>@item.Name</p>
+            </td>
+            <td>
+                <p>@item.Text</p>
+            </td>
+            <td>
+                @foreach (var itemTag in item.Tags)
+                {
+                    <p>@itemTag.Name</p>
+                }
+            </td>
+            <td>
+                @if (@item.Published == true)
+                {
+                    <p>Да</p>
+                }
+                else
+                {
+                    <p>Нет</p>
+                }
+            </td>
+            <td>
+                <p>@item.DateTime</p>
+            </td>
+            <td><a href="@item.Path" download><img src="@item.Ico"></a></td>
+            <td>
+                @Html.ActionLink("Редактировать", "Edit", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>

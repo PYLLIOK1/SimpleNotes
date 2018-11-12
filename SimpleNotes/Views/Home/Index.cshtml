@@ -1,0 +1,21 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutHm.cshtml";
+}
+<div style="margin-top: 20px;">
+    @using (Ajax.BeginForm("Index", new AjaxOptions { OnSuccess = "standardistaTableSortingInit()", UpdateTargetId = "result" }))
+    {
+        <div class="form-group">
+            <input type="text" name="search" class="input-sm" />
+            <input type="hidden" name="Searchid" value="0" />
+            <input type="submit" value="Поиск" class="btn-sm" />
+        </div>
+    }
+    <h1>@ViewBag.Title</h1>
+    <div id="result">
+        @Html.Partial("List")
+    </div>
+</div>
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+<script src="~/Scripts/common.js"></script>
+<script src="~/Scripts/css.js"></script>
+<script src="~/Scripts/standardista-table-sorting.js"></script>
